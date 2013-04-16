@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block corpo %}
+
+<a href="/professor/material/adiciona/">Adicionar novo Material</a>
+<ul>
+	{% for material in lista_materiais %}
+	  <li>
+			{{ material.nome }} -
+			{{ material.data|date:'d/m/Y' }} às {{ material.data|date:'H:s:i' }}
+			<p>{{ material.descricao }}</p>
+			<p><a href="{{ material.arquivo }}">Download do Material</a></p>
+		</li>
+	{% empty %}
+	  <li>Nenhum material até o momento.</li>
+	{% endfor %}
+</ul>
+
+<p><a href="../">Voltar</a></p>
+{% endblock %}

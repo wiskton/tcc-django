@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block corpo %}
+
+<p>Alterar nota aluno <b>{{ aluno.aluno_id.nome }}</b></p>
+
+<form action="" method="post">
+	{% csrf_token %}
+  <input type="hidden" id="id_aluno_id" name="aluno_id" value="{{ aluno.aluno_id.id }}" >
+  <input type="hidden" id="id_turma_id" name="turma_id" value="{{ aluno.turma_id.id }}" >
+  <input type="hidden" id="id_disciplina_id" name="disciplina_id" value="{{ aluno.disciplina_id.id }}" >
+  <input type="hidden" id="id_id" name="id" value="{{ aluno.id }}" >
+  <table>
+    <tr>
+      <td>{{ form.nota1.label_tag }}</td>
+    </tr>
+    <tr>
+      <td>{{ form.nota1.errors }}</td>
+    </tr>
+    <tr>
+      <td>{{ form.nota1 }}</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>{{ form.nota2.label_tag }}</td>
+    </tr>
+    <tr>
+      <td>{{ form.nota2.errors }}</td>
+    </tr>
+    <tr>
+      <td>{{ form.nota2 }}</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>{{ form.exame.label_tag }}</td>
+    </tr>
+    <tr>
+      <td>{{ form.exame.errors }}</td>
+    </tr>
+    <tr>
+      <td>{{ form.exame }}</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>{{ form.falta.label_tag }}</td>
+    </tr>
+    <tr>
+      <td>{{ form.falta.errors }}</td>
+    </tr>
+    <tr>
+      <td>{{ form.falta }}</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+  </table>
+  <button type="submit">Alterar</button>
+</form>
+
+<p><a href="/professor/disciplina/{{ aluno.disciplina_id.id }}">Voltar</a></p>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block corpo %}
+
+<h3>Área do Professor</h3>
+
+Bem vindo {{ professor.nome }}, <a href="logout">sair</a>
+
+<div class="opcao"><a href="equipamento">Agendar Equipamento</a></div>
+<div class="opcao"><a href="material">Materias</a></div>
+<div class="opcao"><a href="disciplina">Notas e Faltas<a></div>
+
+{% endblock %}

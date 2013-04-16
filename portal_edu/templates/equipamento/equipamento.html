@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block corpo %}
+
+<p><b>Todos os Equipamentos</b></p>
+{% for equipamento in lista_equipamentos %}
+	<div class="opcao">
+		<a href="{{ equipamento.id }}/">{{ equipamento.nome }}</a>
+	</div>
+{% empty %}
+	<li>Nenhum equipamento até o momento.</li>
+{% endfor %}
+
+
+<p><a href="../">Voltar</a></p>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block corpo %}
+<form action="" method="post" enctype="multipart/form-data">
+	{% csrf_token %}
+	<table>
+		<tr>
+			<td>{{ form.nome.label_tag }}</td>
+		</tr>
+		<tr>
+			<td>{{ form.nome.errors }}</td>
+		</tr>
+		<tr>
+			<td>{{ form.nome }}</td>
+		</tr>
+		<tr>
+			<td>{{ form.descricao.label_tag }}</td>
+		</tr>
+		<tr>
+			<td>{{ form.descricao.errors }}</td>
+		</tr>
+		<tr>
+			<td>{{ form.descricao }}</td>
+		</tr>
+		<tr>
+			<td>{{ form.arquivo.label_tag }}</td>
+		</tr>
+		<tr>
+			<td>{{ form.arquivo.errors }}</td>
+		</tr>
+		<tr>
+			<td>{{ form.arquivo }}</td>
+		</tr>
+		<tr>
+			<td>{{ form.disciplina_id.label_tag }}</td>
+		</tr>
+		<tr>
+		 	<td>{{ form.disciplina_id.errors }}</td>
+		</tr>
+		<tr>
+			<td>
+			<select name="disciplina_id" id="id_disciplina_id">
+				<option></option>
+				{% for d in disciplina %}
+				<option value="{{ d.id }}" >{{ d.nome }}</option>
+				{% endfor %}
+			</select>
+			</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+		</tr>
+	</table>
+	<button type="submit">Adicionar</button>
+</form>
+<p><a href="../">Voltar</a></p>
+{% endblock %}

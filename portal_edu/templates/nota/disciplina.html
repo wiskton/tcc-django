@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block corpo %}
+
+<ul>
+	<table border="1">
+	<tr>
+		<td>Nome</td>
+		<td>Nota 1</td>
+		<td>Nota 2</td>
+		<td>Faltas</td>
+		<td>Exame</td>
+	</tr>
+	{% for disciplina in lista_disciplinas %}
+	<tr>
+		<td>{{ disciplina.disciplina_id.nome }}</td>
+		<td align="right">{{ disciplina.nota1 }}</td>
+		<td align="right">{{ disciplina.nota2 }}</td>
+		<td align="right">{{ disciplina.falta }}</td>
+		<td align="right">{{ disciplina.exame }}</td>
+	</tr>
+	{% empty %}
+	<tr>
+		<td colspan="5">Nenhuma disciplina até o momento.</td>
+	</tr>
+	{% endfor %}
+	</table>
+</ul>
+
+<p><a href="../">Voltar</a></p>
+{% endblock %}

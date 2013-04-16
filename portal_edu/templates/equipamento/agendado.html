@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block corpo %}
+
+<ul>
+  <li>
+    <b>{{ professorEquipamento.equipamento_id.nome }}</b> 
+    agendado com sucesso para <b>{{ professorEquipamento.data_inicial }}</b>. 
+  </li>
+</ul>
+
+<p><a href="../">Voltar</a></p>
+{% endblock %}

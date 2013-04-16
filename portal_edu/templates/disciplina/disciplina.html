@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block corpo %}
+
+<ul>
+	{% for disciplina in lista_disciplinas %}
+	<li>
+		<a href="{{ disciplina.id }}">
+			{{ disciplina.nome }}
+		</a>
+	</li>
+	{% empty %}
+	  <li>Nenhuma disciplina até o momento.</li>
+	{% endfor %}
+</ul>
+
+<p><a href="../">Voltar</a></p>
+{% endblock %}

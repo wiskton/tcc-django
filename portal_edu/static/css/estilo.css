@@ -1,0 +1,44 @@
+body,div,p,td {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 12px;
+}
+
+.opcao{
+  border: #CCCCCC solid 1px;
+  background: #F2F2F2;
+  color:#000000;
+  margin:5px;
+  padding:5px;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+  font-weight:bold;
+}
+
+.errorlist{
+  border: #FF0000 solid 1px;
+  color: #FFF;
+  background-color:#FF5A49;
+}
+
+button{
+	color:black;
+	background-color:#FFF;
+	border:black solid 1px;
+	font-size:12px;
+}
+
+input{
+  border:#CCC solid 1px;
+  background-color:#FFF;
+}
+input:focus{
+  border:orange solid 1px;
+  background-color:#FFFF99;
+}
+input:hover{
+  border:#6699FF solid 1px;
+  background-color:#CCCCFF;
+}
